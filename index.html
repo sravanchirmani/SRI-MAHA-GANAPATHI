@@ -9,390 +9,18 @@
     <meta name="description"
           content="Sri Maha Ganapathi Utsav 2026 — a digital celebration by Shiva Shakthi Youth.">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Georgia, "Times New Roman", serif;
-            background: #120604;
-            color: #fff8e7;
-            overflow-x: hidden;
-        }
-
-        /* ---------- NAVIGATION ---------- */
-
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            padding: 18px 6%;
-
-            background: rgba(18, 6, 4, 0.78);
-            backdrop-filter: blur(12px);
-
-            border-bottom: 1px solid rgba(255, 193, 7, 0.25);
-        }
-
-        .logo {
-            color: #ffd166;
-            font-size: 1.35rem;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
-
-        nav a {
-            color: #fff8e7;
-            text-decoration: none;
-            margin-left: 25px;
-            font-family: Arial, sans-serif;
-            font-size: 0.9rem;
-        }
-
-        nav a:hover {
-            color: #ffd166;
-        }
-
-        /* ---------- HERO ---------- */
-
-        .hero {
-            min-height: 100vh;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-
-            padding: 120px 20px 80px;
-
-            position: relative;
-
-            background:
-                radial-gradient(circle at center,
-                    rgba(255, 153, 0, 0.25),
-                    transparent 38%),
-                linear-gradient(
-                    135deg,
-                    #210806,
-                    #4b0d08,
-                    #120604
-                );
-        }
-
-        .hero::before {
-            content: "ॐ";
-            position: absolute;
-            top: 17%;
-            left: 50%;
-            transform: translateX(-50%);
-
-            font-size: 7rem;
-            color: rgba(255, 193, 7, 0.08);
-        }
-
-        .hero-content {
-            max-width: 900px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .eyebrow {
-            color: #ffd166;
-            font-family: Arial, sans-serif;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            font-size: clamp(3rem, 9vw, 7rem);
-            line-height: 0.95;
-
-            background: linear-gradient(
-                90deg,
-                #ffe9a6,
-                #ffd166,
-                #fff3c4,
-                #d99a19
-            );
-
-            -webkit-background-clip: text;
-            color: transparent;
-
-            text-shadow: 0 0 40px rgba(255, 193, 7, 0.15);
-        }
-
-        .hero-subtitle {
-            margin-top: 25px;
-            font-size: clamp(1.2rem, 3vw, 1.8rem);
-            color: #f7dfad;
-        }
-
-        .mantra {
-            margin-top: 15px;
-            color: #ffcf70;
-            font-size: 1.15rem;
-        }
-
-        .hero-buttons {
-            margin-top: 40px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 14px 27px;
-            margin: 7px;
-
-            border-radius: 50px;
-
-            text-decoration: none;
-
-            font-family: Arial, sans-serif;
-            font-weight: bold;
-
-            transition: 0.3s;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #ffca3a, #c77d00);
-            color: #210806;
-        }
-
-        .btn-secondary {
-            border: 1px solid #dcae42;
-            color: #ffe6a3;
-        }
-
-        .btn:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 30px rgba(255, 193, 7, 0.2);
-        }
-
-        /* ---------- COUNTDOWN ---------- */
-
-        .countdown-section {
-            padding: 80px 20px;
-            text-align: center;
-
-            background: #190705;
-        }
-
-        .section-label {
-            color: #ffd166;
-            font-family: Arial, sans-serif;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            font-size: 0.8rem;
-        }
-
-        h2 {
-            margin-top: 10px;
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            color: #fff0bd;
-        }
-
-        .countdown {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 35px;
-        }
-
-        .time-box {
-            min-width: 120px;
-            padding: 25px 18px;
-
-            border: 1px solid rgba(255, 209, 102, 0.35);
-            border-radius: 18px;
-
-            background: rgba(255, 255, 255, 0.035);
-
-            box-shadow:
-                inset 0 0 30px rgba(255, 193, 7, 0.03),
-                0 10px 35px rgba(0, 0, 0, 0.25);
-        }
-
-        .time-number {
-            display: block;
-            color: #ffd166;
-            font-family: Arial, sans-serif;
-            font-size: 2.5rem;
-            font-weight: bold;
-        }
-
-        .time-label {
-            color: #cbb995;
-            font-family: Arial, sans-serif;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        /* ---------- SECTIONS ---------- */
-
-        section.content {
-            padding: 100px 8%;
-        }
-
-        .section-inner {
-            max-width: 1100px;
-            margin: auto;
-        }
-
-        .intro {
-            text-align: center;
-            max-width: 800px;
-            margin: 25px auto 0;
-            color: #d9c9a6;
-            line-height: 1.8;
-            font-family: Arial, sans-serif;
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
-            margin-top: 50px;
-        }
-
-        .card {
-            padding: 30px;
-
-            border-radius: 20px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(255, 193, 7, 0.08),
-                    rgba(255, 255, 255, 0.025)
-                );
-
-            border: 1px solid rgba(255, 193, 7, 0.18);
-
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(255, 193, 7, 0.5);
-        }
-
-        .card-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-
-        .card h3 {
-            color: #ffd166;
-            margin-bottom: 10px;
-            font-size: 1.4rem;
-        }
-
-        .card p {
-            color: #cdbd9c;
-            line-height: 1.7;
-            font-family: Arial, sans-serif;
-        }
-
-        /* ---------- LIVE UPDATE ---------- */
-
-        .live {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-
-            color: #ffd166;
-            font-family: Arial, sans-serif;
-            font-size: 0.85rem;
-            margin-top: 20px;
-        }
-
-        .live-dot {
-            width: 9px;
-            height: 9px;
-            border-radius: 50%;
-            background: #ff4d4d;
-            box-shadow: 0 0 12px #ff4d4d;
-        }
-
-        /* ---------- FOOTER ---------- */
-
-        footer {
-            padding: 60px 20px;
-            text-align: center;
-
-            background: #0b0302;
-
-            border-top: 1px solid rgba(255, 193, 7, 0.15);
-        }
-
-        .footer-title {
-            color: #ffd166;
-            font-size: 1.7rem;
-            margin-bottom: 12px;
-        }
-
-        footer p {
-            color: #9e9177;
-            font-family: Arial, sans-serif;
-            line-height: 1.7;
-        }
-
-        .bappa {
-            margin-top: 25px;
-            color: #f5d27a;
-            font-size: 1.3rem;
-        }
-
-        /* ---------- MOBILE ---------- */
-
-        @media (max-width: 800px) {
-
-            nav {
-                padding: 15px 20px;
-            }
-
-            nav .links {
-                display: none;
-            }
-
-            .cards {
-                grid-template-columns: 1fr;
-            }
-
-            .time-box {
-                min-width: 100px;
-            }
-
-            section.content {
-                padding: 75px 20px;
-            }
-        }
-    </style>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <!-- NAVIGATION -->
+    <!-- ==================== NAVIGATION ==================== -->
 
     <nav>
-        <div class="logo">🕉 SRI MAHA GANAPATHI</div>
+        <div class="logo">
+            🕉 SRI MAHA GANAPATHI
+        </div>
 
         <div class="links">
             <a href="#home">Home</a>
@@ -404,7 +32,7 @@
     </nav>
 
 
-    <!-- HERO -->
+    <!-- ==================== HERO ==================== -->
 
     <header class="hero" id="home">
 
@@ -444,7 +72,7 @@
     </header>
 
 
-    <!-- COUNTDOWN -->
+    <!-- ==================== COUNTDOWN ==================== -->
 
     <section class="countdown-section">
 
@@ -452,7 +80,9 @@
             The Celebration Awaits
         </div>
 
-        <h2>Countdown to Nimmajjanam</h2>
+        <h2>
+            Countdown to Nimmajjanam
+        </h2>
 
         <div class="countdown">
 
@@ -481,7 +111,7 @@
     </section>
 
 
-    <!-- FESTIVAL -->
+    <!-- ==================== FESTIVAL ==================== -->
 
     <section class="content" id="festival">
 
@@ -491,7 +121,9 @@
                 Our Celebration
             </div>
 
-            <h2>The Festival</h2>
+            <h2>
+                The Festival
+            </h2>
 
             <p class="intro">
                 Sri Maha Ganapathi Utsav 2026 brings our community together
@@ -502,30 +134,56 @@
             <div class="cards">
 
                 <div class="card">
-                    <div class="card-icon">🪔</div>
-                    <h3>Daily Puja</h3>
+
+                    <div class="card-icon">
+                        🪔
+                    </div>
+
+                    <h3>
+                        Daily Puja
+                    </h3>
+
                     <p>
                         Follow daily puja, aarti and special devotional
                         programs throughout the festival.
                     </p>
+
                 </div>
 
+
                 <div class="card">
-                    <div class="card-icon">🌺</div>
-                    <h3>Celebrations</h3>
+
+                    <div class="card-icon">
+                        🌺
+                    </div>
+
+                    <h3>
+                        Celebrations
+                    </h3>
+
                     <p>
                         Experience cultural programs, decorations,
                         devotional activities and community events.
                     </p>
+
                 </div>
 
+
                 <div class="card">
-                    <div class="card-icon">🙏</div>
-                    <h3>Seva</h3>
+
+                    <div class="card-icon">
+                        🙏
+                    </div>
+
+                    <h3>
+                        Seva
+                    </h3>
+
                     <p>
                         Join our community service initiatives and
                         contribute to making the celebration meaningful.
                     </p>
+
                 </div>
 
             </div>
@@ -535,7 +193,7 @@
     </section>
 
 
-    <!-- LIVE UPDATES -->
+    <!-- ==================== LIVE UPDATES ==================== -->
 
     <section class="content" id="updates">
 
@@ -545,7 +203,9 @@
                 Festival Information
             </div>
 
-            <h2>Live Updates</h2>
+            <h2>
+                Live Updates
+            </h2>
 
             <div class="live">
                 <span class="live-dot"></span>
@@ -555,27 +215,53 @@
             <div class="cards">
 
                 <div class="card">
-                    <div class="card-icon">📢</div>
-                    <h3>Announcements</h3>
+
+                    <div class="card-icon">
+                        📢
+                    </div>
+
+                    <h3>
+                        Announcements
+                    </h3>
+
                     <p>
                         Festival announcements will appear here.
                     </p>
+
                 </div>
 
+
                 <div class="card">
-                    <div class="card-icon">📸</div>
-                    <h3>Gallery</h3>
+
+                    <div class="card-icon">
+                        📸
+                    </div>
+
+                    <h3>
+                        Gallery
+                    </h3>
+
                     <p>
                         Festival photographs and memories will be added here.
                     </p>
+
                 </div>
 
+
                 <div class="card">
-                    <div class="card-icon">🎥</div>
-                    <h3>Videos</h3>
+
+                    <div class="card-icon">
+                        🎥
+                    </div>
+
+                    <h3>
+                        Videos
+                    </h3>
+
                     <p>
                         Watch festival videos, aarti and special moments.
                     </p>
+
                 </div>
 
             </div>
@@ -585,7 +271,7 @@
     </section>
 
 
-    <!-- SCHEDULE -->
+    <!-- ==================== SCHEDULE ==================== -->
 
     <section class="content" id="schedule">
 
@@ -595,32 +281,60 @@
                 Program
             </div>
 
-            <h2>Festival Schedule</h2>
+            <h2>
+                Festival Schedule
+            </h2>
 
             <div class="cards">
 
                 <div class="card">
-                    <div class="card-icon">🌅</div>
-                    <h3>Morning Puja</h3>
+
+                    <div class="card-icon">
+                        🌅
+                    </div>
+
+                    <h3>
+                        Morning Puja
+                    </h3>
+
                     <p>
                         Daily devotional activities and morning prayers.
                     </p>
+
                 </div>
 
+
                 <div class="card">
-                    <div class="card-icon">🪔</div>
-                    <h3>Evening Aarti</h3>
+
+                    <div class="card-icon">
+                        🪔
+                    </div>
+
+                    <h3>
+                        Evening Aarti
+                    </h3>
+
                     <p>
                         Join the community for the evening aarti.
                     </p>
+
                 </div>
 
+
                 <div class="card">
-                    <div class="card-icon">🎉</div>
-                    <h3>Special Events</h3>
+
+                    <div class="card-icon">
+                        🎉
+                    </div>
+
+                    <h3>
+                        Special Events
+                    </h3>
+
                     <p>
                         Cultural and devotional programs will be announced.
                     </p>
+
                 </div>
 
             </div>
@@ -630,7 +344,7 @@
     </section>
 
 
-    <!-- TEAM -->
+    <!-- ==================== TEAM ==================== -->
 
     <section class="content" id="team">
 
@@ -640,7 +354,9 @@
                 Our Community
             </div>
 
-            <h2>Shiva Shakthi Youth</h2>
+            <h2>
+                Shiva Shakthi Youth
+            </h2>
 
             <p class="intro">
                 United by devotion, friendship and service, Shiva Shakthi
@@ -652,7 +368,7 @@
     </section>
 
 
-    <!-- FOOTER -->
+    <!-- ==================== FOOTER ==================== -->
 
     <footer>
 
@@ -675,7 +391,7 @@
     </footer>
 
 
-    <!-- COUNTDOWN SCRIPT -->
+    <!-- ==================== COUNTDOWN SCRIPT ==================== -->
 
     <script>
 
@@ -686,7 +402,9 @@
          * Nimmajjanam date and time later.
          */
 
-        const targetDate = new Date("September 10, 2026 18:00:00").getTime();
+        const targetDate =
+            new Date("September 10, 2026 18:00:00").getTime();
+
 
         function updateCountdown() {
 
@@ -694,42 +412,55 @@
 
             const difference = targetDate - now;
 
+
             if (difference <= 0) {
+
                 document.getElementById("days").textContent = "00";
                 document.getElementById("hours").textContent = "00";
                 document.getElementById("minutes").textContent = "00";
                 document.getElementById("seconds").textContent = "00";
+
                 return;
             }
+
 
             const days = Math.floor(
                 difference / (1000 * 60 * 60 * 24)
             );
 
+
             const hours = Math.floor(
                 (difference / (1000 * 60 * 60)) % 24
             );
+
 
             const minutes = Math.floor(
                 (difference / (1000 * 60)) % 60
             );
 
+
             const seconds = Math.floor(
                 (difference / 1000) % 60
             );
 
+
             document.getElementById("days").textContent =
                 String(days).padStart(2, "0");
+
 
             document.getElementById("hours").textContent =
                 String(hours).padStart(2, "0");
 
+
             document.getElementById("minutes").textContent =
                 String(minutes).padStart(2, "0");
 
+
             document.getElementById("seconds").textContent =
                 String(seconds).padStart(2, "0");
+
         }
+
 
         updateCountdown();
 
