@@ -20,7 +20,6 @@
     --glass-border: rgba(255, 193, 7, 0.20);
 }
 
-
 /* =========================================================
    RESET
    ========================================================= */
@@ -42,7 +41,6 @@ body {
     overflow-x: hidden;
 }
 
-
 /* =========================================================
    NAVIGATION
    ========================================================= */
@@ -58,43 +56,43 @@ nav {
     justify-content: space-between;
     align-items: center;
 
-    padding: 18px 6%;
+    padding: 16px 5%;
 
-    background: rgba(18, 6, 4, 0.82);
-    backdrop-filter: blur(14px);
+    background: rgba(18, 6, 4, 0.90);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
 
     border-bottom: 1px solid rgba(255, 193, 7, 0.25);
 }
 
 .logo {
     color: var(--gold);
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     font-weight: bold;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
+    white-space: nowrap;
 }
 
 nav .links {
     display: flex;
     align-items: center;
+    gap: 24px;
 }
 
 nav a {
     color: var(--cream);
     text-decoration: none;
 
-    margin-left: 28px;
-
     font-family: Arial, sans-serif;
-    font-size: 0.9rem;
+    font-size: 0.82rem;
     font-weight: 600;
 
-    transition: 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
     color: var(--gold);
 }
-
 
 /* =========================================================
    HERO
@@ -104,26 +102,25 @@ nav a:hover {
     min-height: 100vh;
 
     display: flex;
-    justify-content: center;
     align-items: center;
-
-    text-align: center;
-
-    padding: 120px 20px 80px;
 
     position: relative;
     overflow: hidden;
 
+    text-align: left;
+
+    padding: 120px 47% 90px 7%;
+
     background:
         radial-gradient(
-            circle at 50% 45%,
-            rgba(255, 153, 0, 0.24),
+            circle at 70% 45%,
+            rgba(255, 153, 0, 0.22),
             transparent 32%
         ),
         radial-gradient(
             circle at 20% 80%,
-            rgba(255, 193, 7, 0.08),
-            transparent 25%
+            rgba(255, 193, 7, 0.09),
+            transparent 28%
         ),
         linear-gradient(
             135deg,
@@ -137,14 +134,12 @@ nav a:hover {
     content: "ॐ";
 
     position: absolute;
-    top: 12%;
-    left: 50%;
+    top: 15%;
+    left: 35%;
 
-    transform: translateX(-50%);
+    font-size: 10rem;
 
-    font-size: 9rem;
-
-    color: rgba(255, 193, 7, 0.07);
+    color: rgba(255, 193, 7, 0.055);
 
     pointer-events: none;
 }
@@ -154,20 +149,20 @@ nav a:hover {
 
     position: absolute;
 
-    width: 600px;
-    height: 600px;
+    width: 650px;
+    height: 650px;
 
     border-radius: 50%;
 
     background:
         radial-gradient(
             circle,
-            rgba(255, 193, 7, 0.13),
+            rgba(255, 193, 7, 0.12),
             transparent 68%
         );
 
     top: 50%;
-    left: 50%;
+    left: 52%;
 
     transform: translate(-50%, -50%);
 
@@ -175,10 +170,11 @@ nav a:hover {
 }
 
 .hero-content {
-    max-width: 1000px;
+    width: 100%;
+    max-width: 720px;
 
     position: relative;
-    z-index: 2;
+    z-index: 3;
 
     animation: heroReveal 1.2s ease forwards;
 }
@@ -188,16 +184,16 @@ nav a:hover {
 
     font-family: Arial, sans-serif;
 
-    letter-spacing: 6px;
+    letter-spacing: 5px;
     text-transform: uppercase;
 
-    font-size: 0.85rem;
+    font-size: 0.78rem;
 
-    margin-bottom: 22px;
+    margin-bottom: 20px;
 }
 
 h1 {
-    font-size: clamp(3.2rem, 9vw, 7.5rem);
+    font-size: clamp(3.8rem, 6vw, 6.5rem);
 
     line-height: 0.92;
 
@@ -224,29 +220,35 @@ h1 {
 .hero-subtitle {
     margin-top: 28px;
 
-    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    max-width: 650px;
+
+    font-size: clamp(1.15rem, 2.5vw, 1.65rem);
 
     color: var(--cream-soft);
+
+    line-height: 1.4;
 }
 
 .mantra {
-    margin-top: 16px;
+    margin-top: 14px;
 
     color: #ffcf70;
 
-    font-size: 1.15rem;
+    font-size: 1.1rem;
 }
 
 .hero-buttons {
-    margin-top: 42px;
+    margin-top: 36px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .btn {
     display: inline-block;
 
-    padding: 15px 30px;
-
-    margin: 7px;
+    padding: 14px 28px;
 
     border-radius: 50px;
 
@@ -254,6 +256,7 @@ h1 {
 
     font-family: Arial, sans-serif;
     font-weight: bold;
+    font-size: 0.9rem;
 
     transition:
         transform 0.3s ease,
@@ -272,7 +275,7 @@ h1 {
     color: #210806;
 
     box-shadow:
-        0 8px 25px rgba(255, 193, 7, 0.16);
+        0 8px 25px rgba(255, 193, 7, 0.18);
 }
 
 .btn-secondary {
@@ -290,7 +293,6 @@ h1 {
         0 12px 35px rgba(255, 193, 7, 0.25);
 }
 
-
 /* =========================================================
    GANAPATHI HERO IMAGE
    ========================================================= */
@@ -298,13 +300,13 @@ h1 {
 .hero-image {
     position: absolute;
 
-    right: 4%;
+    right: 2.5%;
     bottom: 0;
 
-    width: 43%;
-    max-width: 560px;
+    width: 42%;
+    max-width: 570px;
 
-    z-index: 1;
+    z-index: 2;
 
     pointer-events: none;
 }
@@ -315,28 +317,34 @@ h1 {
     width: 100%;
     height: auto;
 
-    border-radius: 24px 24px 0 0;
+    border-radius: 28px 28px 0 0;
 
     filter:
         drop-shadow(
-            0 0 35px rgba(255, 193, 7, 0.22)
+            0 0 35px rgba(255, 193, 7, 0.25)
         );
 
     mask-image:
         linear-gradient(
             to bottom,
-            black 82%,
+            black 84%,
+            transparent 100%
+        );
+
+    -webkit-mask-image:
+        linear-gradient(
+            to bottom,
+            black 84%,
             transparent 100%
         );
 }
-
 
 /* =========================================================
    COUNTDOWN
    ========================================================= */
 
 .countdown-section {
-    padding: 90px 20px;
+    padding: 75px 20px;
 
     text-align: center;
 
@@ -363,7 +371,7 @@ h1 {
 
     text-transform: uppercase;
 
-    font-size: 0.78rem;
+    font-size: 0.76rem;
 }
 
 h2 {
@@ -379,17 +387,17 @@ h2 {
 
     justify-content: center;
 
-    gap: 18px;
+    gap: 16px;
 
     flex-wrap: wrap;
 
-    margin-top: 40px;
+    margin-top: 38px;
 }
 
 .time-box {
-    min-width: 125px;
+    min-width: 120px;
 
-    padding: 27px 18px;
+    padding: 25px 18px;
 
     border:
         1px solid rgba(255, 209, 102, 0.35);
@@ -424,7 +432,7 @@ h2 {
 
     font-family: Arial, sans-serif;
 
-    font-size: 2.7rem;
+    font-size: 2.6rem;
 
     font-weight: bold;
 }
@@ -436,7 +444,7 @@ h2 {
 
     font-family: Arial, sans-serif;
 
-    font-size: 0.72rem;
+    font-size: 0.7rem;
 
     text-transform: uppercase;
 
@@ -445,19 +453,18 @@ h2 {
     margin-top: 6px;
 }
 
-
 /* =========================================================
    CONTENT SECTIONS
    ========================================================= */
 
 section.content {
-    padding: 105px 8%;
+    padding: 100px 7%;
 
     position: relative;
 }
 
 .section-inner {
-    max-width: 1100px;
+    max-width: 1150px;
 
     margin: auto;
 }
@@ -478,7 +485,6 @@ section.content {
     font-size: 1rem;
 }
 
-
 /* =========================================================
    CARDS
    ========================================================= */
@@ -495,9 +501,9 @@ section.content {
 }
 
 .card {
-    padding: 32px;
+    padding: 30px;
 
-    min-height: 220px;
+    min-height: 210px;
 
     border-radius: 22px;
 
@@ -532,9 +538,9 @@ section.content {
 }
 
 .card-icon {
-    font-size: 2.6rem;
+    font-size: 2.5rem;
 
-    margin-bottom: 18px;
+    margin-bottom: 17px;
 }
 
 .card h3 {
@@ -542,7 +548,7 @@ section.content {
 
     margin-bottom: 12px;
 
-    font-size: 1.45rem;
+    font-size: 1.4rem;
 }
 
 .card p {
@@ -552,9 +558,8 @@ section.content {
 
     font-family: Arial, sans-serif;
 
-    font-size: 0.95rem;
+    font-size: 0.94rem;
 }
-
 
 /* =========================================================
    LIVE STATUS
@@ -571,7 +576,7 @@ section.content {
 
     font-family: Arial, sans-serif;
 
-    font-size: 0.85rem;
+    font-size: 0.84rem;
 
     margin-top: 20px;
 
@@ -592,7 +597,6 @@ section.content {
     animation:
         livePulse 1.5s infinite;
 }
-
 
 /* =========================================================
    SECTION BACKGROUNDS
@@ -636,7 +640,6 @@ section.content {
         );
 }
 
-
 /* =========================================================
    FOOTER
    ========================================================= */
@@ -676,7 +679,6 @@ footer p {
     font-size: 1.35rem;
 }
 
-
 /* =========================================================
    ANIMATIONS
    ========================================================= */
@@ -706,44 +708,57 @@ footer p {
     }
 }
 
-
 /* =========================================================
    TABLET
    ========================================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
 
     nav {
-        padding: 16px 4%;
+        padding: 15px 3%;
     }
 
-    .logo {
-        font-size: 1.1rem;
+    nav .links {
+        gap: 15px;
     }
 
     nav a {
-        margin-left: 15px;
+        font-size: 0.75rem;
+    }
+
+    .logo {
+        font-size: 1.05rem;
+    }
+
+    .hero {
+        padding-left: 5%;
+        padding-right: 48%;
+    }
+
+    .hero-image {
+        width: 44%;
+        right: 1%;
     }
 
     .cards {
         grid-template-columns:
             repeat(2, 1fr);
     }
-
-    section.content {
-        padding: 85px 6%;
-    }
 }
-
 
 /* =========================================================
    MOBILE
    ========================================================= */
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
 
     nav {
-        padding: 15px 20px;
+        padding: 14px 18px;
+    }
+
+    .logo {
+        font-size: 0.95rem;
+        letter-spacing: 1px;
     }
 
     nav .links {
@@ -753,33 +768,51 @@ footer p {
     .hero {
         min-height: 100svh;
 
+        display: flex;
+
+        align-items: flex-start;
+
+        justify-content: center;
+
+        text-align: center;
+
         padding:
-            95px
+            105px
             18px
-            360px;
+            370px;
     }
 
     .hero::before {
         font-size: 6rem;
+
+        top: 13%;
+    }
+
+    .hero-content {
+        width: 100%;
+
+        max-width: 600px;
     }
 
     .eyebrow {
-        letter-spacing: 4px;
+        letter-spacing: 3px;
 
-        font-size: 0.72rem;
+        font-size: 0.7rem;
     }
 
     h1 {
         font-size:
             clamp(
                 3rem,
-                16vw,
+                15vw,
                 5rem
             );
     }
 
     .hero-subtitle {
-        font-size: 1.1rem;
+        font-size: 1.08rem;
+
+        margin-top: 22px;
     }
 
     .mantra {
@@ -787,47 +820,19 @@ footer p {
     }
 
     .hero-buttons {
+        display: block;
+
         margin-top: 28px;
     }
 
     .btn {
         display: block;
 
-        max-width: 260px;
+        width: 100%;
+
+        max-width: 270px;
 
         margin: 10px auto;
-    }
-
-    .countdown {
-        gap: 10px;
-    }
-
-    .time-box {
-        min-width: 105px;
-
-        padding: 22px 12px;
-    }
-
-    .time-number {
-        font-size: 2.1rem;
-    }
-
-    .cards {
-        grid-template-columns: 1fr;
-
-        gap: 18px;
-    }
-
-    section.content {
-        padding: 75px 20px;
-    }
-
-    .card {
-        padding: 27px;
-    }
-
-    h2 {
-        font-size: 2.2rem;
     }
 
     .hero-image {
@@ -848,11 +853,94 @@ footer p {
             0;
     }
 
-    .hero-content {
-        width: 100%;
+    .countdown-section {
+        padding:
+            65px
+            15px;
+    }
+
+    .countdown {
+        gap: 10px;
+    }
+
+    .time-box {
+        min-width: 105px;
+
+        padding:
+            20px
+            10px;
+    }
+
+    .time-number {
+        font-size: 2.1rem;
+    }
+
+    .time-label {
+        font-size: 0.65rem;
+    }
+
+    section.content {
+        padding:
+            75px
+            20px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+        margin-top: 35px;
+    }
+
+    .card {
+        padding: 27px;
+    }
+
+    h2 {
+        font-size: 2.2rem;
     }
 }
 
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .logo {
+        font-size: 0.82rem;
+    }
+
+    .hero {
+        padding:
+            100px
+            15px
+            330px;
+    }
+
+    h1 {
+        font-size: 2.9rem;
+    }
+
+    .hero-image {
+        width: 96%;
+
+        right: 2%;
+    }
+
+    .time-box {
+        min-width: 92px;
+
+        padding:
+            18px
+            8px;
+    }
+
+    .time-number {
+        font-size: 1.8rem;
+    }
+}
 
 /* =========================================================
    REDUCED MOTION
@@ -867,77 +955,14 @@ footer p {
     *,
     *::before,
     *::after {
-        animation-duration: 0.01ms !important;
+        animation-duration:
+            0.01ms !important;
 
-        animation-iteration-count: 1 !important;
+        animation-iteration-count:
+            1 !important;
 
-        transition-duration: 0.01ms !important;
-    }
-}
-/* =========================================================
-   HERO DESKTOP LAYOUT FIX
-   ========================================================= */
-
-@media (min-width: 651px) {
-
-    .hero {
-        justify-content: flex-start;
-        text-align: left;
-        padding-left: 7%;
-        padding-right: 45%;
-    }
-
-    .hero-content {
-        max-width: 720px;
-        width: 100%;
-    }
-
-    .hero h1 {
-        font-size: clamp(4rem, 6vw, 6.2rem);
-    }
-
-    .hero-subtitle {
-        max-width: 650px;
-    }
-
-    .hero-buttons {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-    }
-
-    .hero-image {
-        right: 3%;
-        width: 39%;
-        max-width: 520px;
+        transition-duration:
+            0.01ms !important;
     }
 }
 
-
-/* =========================================================
-   MOBILE HERO
-   ========================================================= */
-
-@media (max-width: 650px) {
-
-    .hero {
-        justify-content: center;
-        text-align: center;
-        padding: 95px 18px 360px;
-    }
-
-    .hero-content {
-        max-width: 100%;
-    }
-
-    .hero-buttons {
-        display: block;
-    }
-
-    .hero-image {
-        width: 92%;
-        max-width: 430px;
-        right: 4%;
-        bottom: 0;
-    }
-}
